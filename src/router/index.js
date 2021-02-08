@@ -25,14 +25,75 @@ const router = new VueRouter({
       },
     },
     {
-      path: '/second-page',
-      name: 'second-page',
-      component: () => import('@/views/SecondPage.vue'),
+      path: '/new-store',
+      name: 'new-store',
+      component: () => import('@/views/NewStore.vue'),
       meta: {
-        pageTitle: 'Second Page',
+        pageTitle: 'New Store',
         breadcrumb: [
           {
-            text: 'Second Page',
+            text: 'New Store',
+            active: true,
+          },
+        ],
+      },
+    },
+    {
+      path: '/reports',
+      name: 'reports',
+      component: () => import('@/views/Reports.vue'),
+      meta: {
+        pageTitle: 'Reports',
+        breadcrumb: [
+          {
+            text: 'Reports',
+            active: true,
+          },
+        ],
+      },
+    },
+    {
+      path: '/account',
+      name: 'account',
+      component: () => import('@/views/Account.vue'),
+      meta: {
+        pageTitle: 'Account',
+        breadcrumb: [
+          {
+            text: 'Account',
+            active: true,
+          },
+        ],
+      },
+    },
+    {
+      path: '/reports/:slug',
+      name: 'report-details',
+      component: () => import('@/views/ReportDetails.vue'),
+      meta: {
+        pageTitle: 'Report Details',
+        breadcrumb: [
+          {
+            text: 'Reports',
+            active: false,
+            path: '/reports',
+          },
+          {
+            text: 'Report Details',
+            active: true,
+          },
+        ],
+      },
+    },
+    {
+      path: '/:slug',
+      name: 'store-details',
+      component: () => import('@/views/StoreDetails.vue'),
+      meta: {
+        pageTitle: 'Store Details',
+        breadcrumb: [
+          {
+            text: 'Store Details',
             active: true,
           },
         ],

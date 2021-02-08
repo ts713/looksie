@@ -24,14 +24,16 @@
               class="navbar-brand"
               to="/"
             >
+              <!--
               <span class="brand-logo">
                 <b-img
                   :src="appLogoImage"
                   alt="logo"
                 />
               </span>
+              -->
               <h2 class="brand-text">
-                {{ appName }}
+                Looksie
               </h2>
             </b-link>
           </li>
@@ -83,7 +85,7 @@
 <script>
 import navMenuItems from '@/navigation/vertical'
 import VuePerfectScrollbar from 'vue-perfect-scrollbar'
-import { BLink, BImg } from 'bootstrap-vue'
+import { BLink } from 'bootstrap-vue'
 import { provide, computed, ref } from '@vue/composition-api'
 import useAppConfig from '@core/app-config/useAppConfig'
 import { $themeConfig } from '@themeConfig'
@@ -95,7 +97,6 @@ export default {
     VuePerfectScrollbar,
     VerticalNavMenuItems,
     BLink,
-    BImg,
   },
   props: {
     isVerticalMenuActive: {

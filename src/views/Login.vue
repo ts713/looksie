@@ -4,9 +4,9 @@
 
       <!-- Brand logo-->
       <b-link class="brand-logo">
-        <vuexy-logo />
+        <!--<looksie-logo />-->
         <h2 class="brand-text text-primary ml-1">
-          Vuexy
+          Looksie
         </h2>
       </b-link>
       <!-- /Brand logo-->
@@ -41,10 +41,10 @@
             title-tag="h2"
             class="font-weight-bold mb-1"
           >
-            Welcome to Vuexy! 👋
+            Welcome to Looksie!
           </b-card-title>
           <b-card-text class="mb-2">
-            Please sign-in to your account and start the adventure
+            Please sign-in to your account to view the dashboard.
           </b-card-text>
 
           <!-- form -->
@@ -68,7 +68,7 @@
                     v-model="userEmail"
                     :state="errors.length > 0 ? false:null"
                     name="login-email"
-                    placeholder="john@example.com"
+                    placeholder="Enter your email..."
                   />
                   <small class="text-danger">{{ errors[0] }}</small>
                 </validation-provider>
@@ -136,9 +136,8 @@
           </validation-observer>
 
           <b-card-text class="text-center mt-2">
-            <span>New on our platform? </span>
             <b-link :to="{name:'page-auth-register-v2'}">
-              <span>&nbsp;Create an account</span>
+              <span>&nbsp;Click Here to Create an Account</span>
             </b-link>
           </b-card-text>
 
@@ -152,6 +151,12 @@
           <!-- social buttons -->
           <div class="auth-footer-btn d-flex justify-content-center">
             <b-button
+              variant="google"
+              href="javascript:void(0)"
+            >
+              <feather-icon icon="MailIcon" />
+            </b-button>
+            <b-button
               variant="facebook"
               href="javascript:void(0)"
             >
@@ -162,18 +167,6 @@
               href="javascript:void(0)"
             >
               <feather-icon icon="TwitterIcon" />
-            </b-button>
-            <b-button
-              variant="google"
-              href="javascript:void(0)"
-            >
-              <feather-icon icon="MailIcon" />
-            </b-button>
-            <b-button
-              variant="github"
-              href="javascript:void(0)"
-            >
-              <feather-icon icon="GithubIcon" />
             </b-button>
           </div>
         </b-col>
@@ -186,7 +179,7 @@
 <script>
 /* eslint-disable global-require */
 import { ValidationProvider, ValidationObserver } from 'vee-validate'
-import VuexyLogo from '@core/layouts/components/Logo.vue'
+// import LooksieLogo from '@core/layouts/components/Logo.vue'
 import {
   BRow, BCol, BLink, BFormGroup, BFormInput, BInputGroupAppend, BInputGroup, BFormCheckbox, BCardText, BCardTitle, BImg, BForm, BButton,
 } from 'bootstrap-vue'
@@ -210,7 +203,6 @@ export default {
     BImg,
     BForm,
     BButton,
-    VuexyLogo,
     ValidationProvider,
     ValidationObserver,
   },
