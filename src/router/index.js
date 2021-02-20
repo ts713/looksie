@@ -25,20 +25,6 @@ const router = new VueRouter({
       },
     },
     {
-      path: '/new-store',
-      name: 'new-store',
-      component: () => import('@/views/NewStore.vue'),
-      meta: {
-        pageTitle: 'New Store',
-        breadcrumb: [
-          {
-            text: 'New Store',
-            active: true,
-          },
-        ],
-      },
-    },
-    {
       path: '/reports',
       name: 'reports',
       component: () => import('@/views/Reports.vue'),
@@ -53,22 +39,9 @@ const router = new VueRouter({
       },
     },
     {
-      path: '/account',
-      name: 'account',
-      component: () => import('@/views/Account.vue'),
-      meta: {
-        pageTitle: 'Account',
-        breadcrumb: [
-          {
-            text: 'Account',
-            active: true,
-          },
-        ],
-      },
-    },
-    {
       path: '/reports/:slug',
       name: 'report-details',
+      props: true,
       component: () => import('@/views/ReportDetails.vue'),
       meta: {
         pageTitle: 'Report Details',
@@ -86,14 +59,14 @@ const router = new VueRouter({
       },
     },
     {
-      path: '/:slug',
-      name: 'store-details',
-      component: () => import('@/views/StoreDetails.vue'),
+      path: '/account',
+      name: 'account',
+      component: () => import('@/views/Account.vue'),
       meta: {
-        pageTitle: 'Store Details',
+        pageTitle: 'Account',
         breadcrumb: [
           {
-            text: 'Store Details',
+            text: 'Account',
             active: true,
           },
         ],
