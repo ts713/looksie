@@ -1,12 +1,19 @@
 <template>
   <div>
-    <p>Page for user to check and update Account Settings.</p>
+    <account-setting-general />
+    <pricing />
   </div>
 </template>
 
 <script>
-export default {
+import AccountSettingGeneral from '@/components/account/AccountSettingGeneral.vue'
+import Pricing from '@/components/account/Pricing.vue'
 
+export default {
+  components: {
+    AccountSettingGeneral,
+    Pricing,
+  },
 }
 </script>
 

@@ -30,7 +30,7 @@
         <template #button-content>
           <div class="d-sm-flex d-none user-nav">
             <p class="user-name font-weight-bolder mb-0">
-              Thomas Swokowski
+              { Store Name Goes Here }
             </p>
           </div>
           <b-avatar
