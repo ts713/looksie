@@ -260,7 +260,7 @@ export default function userCalendar() {
     initialView: 'listMonth',
     headerToolbar: {
       start: 'sidebarToggle, prev,next, title',
-      end: 'listMonth,dayGridMonth,timeGridWeek,timeGridDay',
+      end: 'listMonth,dayGridMonth',
     },
     events: fetchEvents,
 
