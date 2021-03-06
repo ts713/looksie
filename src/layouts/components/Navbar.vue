@@ -30,7 +30,7 @@
         <template #button-content>
           <div class="d-sm-flex d-none user-nav">
             <p class="user-name font-weight-bolder mb-0">
-              { Store Name Goes Here }
+              {{ $store.state.user.name }}
             </p>
           </div>
           <b-avatar
@@ -56,7 +56,10 @@
 
         <b-dropdown-divider />
 
-        <b-dropdown-item link-class="d-flex align-items-center">
+        <b-dropdown-item
+          link-class="d-flex align-items-center"
+          @click="logout()"
+        >
           <feather-icon
             size="16"
             icon="LogOutIcon"
@@ -91,6 +94,16 @@ export default {
     toggleVerticalMenuActive: {
       type: Function,
       default: () => {},
+    },
+  },
+  computed: {
+    userShopUrl() {
+      return this.$store.state.user.shopUrl
+    },
+  },
+  methods: {
+    logout() {
+      window.location.replace(this.userShopUrl)
     },
   },
 }

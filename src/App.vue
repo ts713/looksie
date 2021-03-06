@@ -22,6 +22,7 @@ import useAppConfig from '@core/app-config/useAppConfig'
 import { useWindowSize, useCssVar } from '@vueuse/core'
 
 import store from '@/store'
+import { mapActions } from 'vuex'
 
 const LayoutVertical = () => import('@/layouts/vertical/LayoutVertical.vue')
 const LayoutHorizontal = () => import('@/layouts/horizontal/LayoutHorizontal.vue')
@@ -67,6 +68,12 @@ export default {
     // Set RTL
     const { isRTL } = $themeConfig.layout
     document.documentElement.setAttribute('dir', isRTL ? 'rtl' : 'ltr')
+  },
+  mounted() {
+    this.getStoreInfoAction()
+  },
+  methods: {
+    ...mapActions(['getStoreInfoAction']),
   },
   setup() {
     const { skin, skinClasses } = useAppConfig()

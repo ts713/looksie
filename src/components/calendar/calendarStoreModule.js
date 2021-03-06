@@ -43,7 +43,7 @@ export default {
     ],
     selectedCalendars: [
       'Sales and Orders', 'Fulfillment and Shipping', 'Tax', 'Billing and Transactions',
-      'Marketing', 'Customers', 'Products', 'Marketing', 'Inventory', 'Payout Reports',
+      'Customers', 'Products', 'Marketing', 'Inventory', 'Payout Reports',
     ],
   },
   getters: {},

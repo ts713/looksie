@@ -1,5 +1,6 @@
 <template>
   <div>
+    {{ storeInfo }}
     <h1>My Reports:</h1>
     <calendar />
   </div>
@@ -11,6 +12,11 @@ export default {
   components: {
     Calendar,
   },
+  data() {
+    return {
+      search: '',
+      storeInfo: null,
+    }
+  },
 }
-
 </script>
